@@ -34,6 +34,14 @@
   .strategy-list {
     flex-direction: column;
   }
+
+  .strategy-list-title {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
 }
 
 @media screen and (min-width: 768px) {
@@ -45,11 +53,6 @@
 
   .strategy-list-item {
     flex-basis: calc((100% - 24px) / 2);
-  }
-
-  .strategy-container {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -72,10 +75,23 @@
 
   .strategy-list {
     width: 1128px;
+    flex-wrap: nowrap;
     gap: 24px;
   }
 
   .strategy-list-item {
     width: 264px;
+  }
+
+  .strategy-list-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+
+  .strategy-list-text {
+    font-weight: 400;
   }
 }
