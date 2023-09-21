@@ -42,3 +42,11 @@ button {
 .link:focus {
   color: #404bbf;
 }
+
+address {
+  font-style: normal;
+}
+
+.current {
+  color: #404bbf;
+}
