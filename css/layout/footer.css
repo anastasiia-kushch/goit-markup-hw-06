@@ -106,6 +106,12 @@
 .submit-button {
   width: 165px;
   align-self: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #404bbf;
 }
 
 @media screen and (max-width: 767px) {
@@ -178,6 +184,9 @@
     width: 1158px;
     margin-left: auto;
     margin-right: auto;
+    column-gap: 0;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .logo-text {

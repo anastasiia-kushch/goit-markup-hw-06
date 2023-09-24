@@ -112,6 +112,8 @@
         rgba(46, 47, 66, 0.7)
       ),
       url('../../images/laptop-bg.jpg');
+    padding-top: 188px;
+    padding-bottom: 188px;
   }
 }
 
