@@ -14,10 +14,6 @@
   flex-direction: column;
 }
 
-.logo-text {
-  margin-right: 120px;
-}
-
 .footer-text {
   color: #f4f4fd;
   font-size: 16px;
@@ -127,16 +123,18 @@
   }
 
   .logo-footer {
-    margin-left: 86px;
+    display: block;
+    text-align: center;
   }
 
   .logo-text {
-    margin-left: 16px;
-    margin-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .footer-social-media-name {
-    margin-left: 112px;
+    display: block;
+    text-align: center;
   }
 
   .footer-social-media-list {
@@ -144,9 +142,20 @@
     margin-right: 56px;
   }
 
+  .submit-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .subscribe-form {
     display: flex;
     flex-direction: column;
+  }
+
+  .footer-subscribe-name {
+    display: block;
+    text-align: center;
   }
 
   .footer-subscribe-container {
