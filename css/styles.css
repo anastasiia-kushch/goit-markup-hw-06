@@ -249,6 +249,19 @@ img {
   }
 }
 
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  @media only screen and (min-width: 1158px) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
 .contacts-link {
   font-weight: 400;
   transition: var(--trns);
@@ -262,7 +275,13 @@ img {
   color: var(--pressed-state-cl);
 }
 
-/* MOBILE MENU */
+/* #region MOBILE MENU */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none;
+}
+
 .open-mob-menu {
   display: flex;
   align-items: center;
@@ -282,12 +301,83 @@ img {
   width: 100%;
   height: 100vh;
 
-  background-color: var(--white-background-cl);
-}
+  padding-top: 72px;
 
+  background-color: var(--white-background-cl);
+
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: var(--trns);
+  transition-property: transform;
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
 
 .menu-open {
+  transform: translatex(0);
 }
+
+.mob-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 168px;
+}
+
+.mob-menu-item {
+  color: var(--dark-cl);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+
+.active {
+  color: var(--pressed-state-cl);
+}
+
+.mob-contacts-list {
+  margin-bottom: 48px;
+}
+
+.mob-contacts-link {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.mob-contacts-item:first-child {
+  color: var(--primary-brand-cl);
+  margin-bottom: 24px;
+}
+
+.mob-socials-list {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.mob-socials-item {
+  width: 40px;
+  height: 40px;
+
+  padding: 8px;
+
+  border-radius: 50%;
+  background-color: var(--primary-brand-cl);
+}
+
+.mob-socials-item:hover,
+.mob-socials-item:focus,
+.mob-socials-item:active {
+  background-color: var(--success-cl);
+}
+
+.mob-socials-icon {
+  fill: var(--white-background-cl);
+}
+/* #endregion */
 
 /* #endregion */
 
@@ -766,9 +856,13 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  max-width: 408px;
-  width: 100%;
-  min-height: 584px;
+  width: 288px;
+  height: 623px;
+
+  @media only screen and (min-width: 768px) {
+    width: 408px;
+    height: 584px;
+  }
 
   background-color: var(--modal-background-cl);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -780,12 +874,16 @@ img {
   justify-content: center;
   align-items: center;
 
-  padding: 72px 24px 24px;
-
   overflow-y: auto;
 
   transition: var(--trns);
   transition-property: transform;
+
+  padding: 72px 16px 24px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 72px 24px 24px;
+  }
 }
 
 .close-btn {
